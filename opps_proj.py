@@ -10,10 +10,33 @@ class ChatBot():
         self.menu()
     
     def menu(self):
-        print("""
+        choice = input("""
         1. Create Account
         2. Login
         3. Exit
         """)
+
+        if choice == '1':
+            self.create_account()
+        elif choice == '2':
+            self.login()    
+        elif choice == '3':
+            print("Exiting the application. Goodbye!")
+            exit() 
+        else:
+            print("Invalid choice. Please try again.")
+            self.menu()
+        
+        
+    def create_account(self):
+        if self.email == '' and self.pwd == '':
+            self.email = input("Enter your email: ")
+            self.pwd = input("Setup your password: ")
+            print("Account created successfully!")
+            self.menu()
+        else:
+            print("Account already exists. Please login.")
+            self.menu()
+
 
 jas = ChatBot()
