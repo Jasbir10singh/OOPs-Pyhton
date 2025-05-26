@@ -38,5 +38,12 @@ class ChatBot():
             print("Account already exists. Please login.")
             self.menu()
 
+    def login(self):
+        self.username = input("Enter your username: ")
+        self.pwd = input("Enter your password: ")
+        print(f"Welcome {self.username}!")
+        self.menu()
 
-jas = ChatBot()
+    
+
+#jas = ChatBot()
