@@ -46,4 +46,6 @@ class ChatBot():
 
     
 
-#jas = ChatBot()
+jas = ChatBot()
+# jas.sex = "Male"
+# print(f"user is {jas.sex}")

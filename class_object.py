@@ -16,6 +16,8 @@ class employee:
 
 # Creating an object of the employee class
 jas = employee()
+# jas.sex = "Male" # Adding a new attribute to the object or calling outside a class/method
+# print(f"user is {jas.sex}")
 # print(jas.name)
 # print(jas.age)
 # print(jas.designation)
