@@ -1,5 +1,5 @@
 class animal:
-    def __init__(self,name):
+    def __init__(self,name): #constructor similary there are other dunder method/magic methods like __str__, __repr__, __len__ etc
         self.name = "Dog"
 
     def speak(self):
