@@ -1,6 +1,10 @@
 # creating a MRP chatbot 
 
 class MRPChatBot():
+
+    __user_id = 0  
+
+
     def __init__(self):
         self.__name = 'Jasbir Singh' # private attribute which i am hidding it from outside the class
         self.material_ID = ''
@@ -9,13 +13,21 @@ class MRPChatBot():
         self.delivery_quantity = 100
         print("Welcome to the MRP ChatBot!")
 
-    def get_name():
-        return MRPChatBot.__name  # Getter method to access the private attribute
-        
-    def set_name(value):
-        MRPChatBot.__name = value  # Setter method to modify the private attribute
+    @staticmethod # Static method to access the class variable no need to define self in static method
+    def get_user_id():
+        return MRPChatBot.__user_id
+    @staticmethod
+    def set_user_id(val):
+        MRPChatBot.__user_id = val
 
+    def get_name(self):
+        return self.__name  # Getter method to access the private attribute
         
+    def set_name(self,value):
+        self.__name = value  # Setter method to modify the private attribute
+
+  
+
     def material_infomation(self):
        if self.material_ID == '' and self.material_description == '':
            self.material_ID = input("Enter Material ID: ")
@@ -39,6 +51,7 @@ class MRPChatBot():
 
 
 mrp = MRPChatBot()
+#print(mrp.__user_id)  # Accessing the class variable directly
 print(mrp.get_name())  # Accessing the private attribute using getter method
 mrp.set_name('DON')  # Modifying the private attribute using setter method
 print(mrp.get_name())  # Accessing the modified private attribute using getter method
